@@ -1,3 +1,2 @@
-class Post < ApplicationRecord::Base
-    belongs_to :topic
+class Post < ApplicationRecord
 end
