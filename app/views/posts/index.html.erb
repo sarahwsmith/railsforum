@@ -1,1 +1,6 @@
-<h1>Testing the post index page</h1>
+<h1>Ruby on Rails Forum Project</h1>
+
+<% @posts.each do |post| %>
+    <h2><%= link_to post.title, post %> </h2>
+<%= link_to "Create new post", new_post_path %>
+<% end %>
