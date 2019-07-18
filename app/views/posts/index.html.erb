@@ -13,4 +13,6 @@
 <br/>
 <% @posts.each do |post| %>
     <h2><%= link_to post.title, post %> </h2>
+    <p>Posted by
+    <%= post.user.email %></p>
 <% end %>
