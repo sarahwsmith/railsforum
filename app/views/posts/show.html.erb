@@ -1,6 +1,12 @@
 <h1><%= @post.title %></h1></br>
 <p><%= @post.context %></p>
 
+<h2><%= @post.comments.count %> comments</h2>
+<%= render @post.comments %>
+
+<h3>Reply to Post</h3>
+<%= render "comments/form" %>
+
 <%= link_to "Edit", edit_post_path(@post) %>
 <%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Do you want to delete this post?" } %>
 <%= link_to "Home", root_path %>
