@@ -1,5 +1,13 @@
-<div class ='comment'>
-<p><%= comment.comment %></p>
-<p><%= comment.user.email %></p>
-<%= link_to "Delete comment", [comment.post, comment], method: :delete %>
+<div class="comment clearfix">
+  <div class="content">
+    <p class="comment_content">
+      <%= comment.comment %>
+    </p>
+    <p class="comment_author">
+      <%= comment.user.email %>
+    </p>
+  </div>
+  <div class="buttons">
+    <%= link_to "Delete", [comment.post, comment], method: :delete%>
+  </div>
 </div>

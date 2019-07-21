@@ -48,5 +48,6 @@ class PostsController < ApplicationController
         @post = Post.find(params[:id])
     end
 
+
     before_action :find_post, only: [:show, :edit, :update, :destroy]
 end

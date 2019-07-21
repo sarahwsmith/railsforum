@@ -13,9 +13,142 @@
  *= require_tree .
  *= require_self
  */
- .wrapper {
-    width: 60%;
-    max-width: 1140px;
+ body {
+    font-family: Montserrat, sans-serif;
+    background: url("https://i.ibb.co/zmwY3hq/asteroids.jpg");
+    height: 100%;
+    margin: 0;
+    background-repeat: repeat;
+    background-attachment: fixed;
+   }
+   .wrapper {
+    width: 70%;
     margin: 0 auto;
    }
-   
+   .clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+   }
+   .clearfix:after {
+    clear: both;
+   }
+   .main_header {
+    width: 100%;
+    background: white;
+    border: #6900C4;
+    border-width: 5px;
+    #logo {
+     float: left;
+     p {
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 30px;
+      color: #6900C4;
+     }
+    }
+    #buttons {
+     float: right;
+     a {
+      line-height: 60px;
+      background: #6900C4;
+      padding: .5em 1em;
+      border-radius: 0.2em;
+      color: white;
+      text-decoration: none;
+      font-weight: 100;
+     }
+    }
+   }
+   #posts {
+    background: white;
+    padding: 2em 5%;
+    border-radius: .5em;
+    .post {
+     margin: 1em 0;
+     padding: 1em 0;
+     border-bottom: 1px solid #D1d1d1;
+     .title {
+      margin: 0;
+      a {
+       color: #6900C4;
+       text-transform: uppercase;
+       text-decoration: none;
+       font-weight: 150;
+       font-size: 1.25rem;
+      }
+     }
+     .date {
+      margin-top: .25rem;
+      font-size: 0.9rem;
+      color: #B2BAC2;
+     }
+    }
+   }
+   #post_content {
+    background: white;
+    padding: 2em 5%;
+    border-radius: .5em;
+    h1 {
+     font-weight: 100;
+     font-size: 2em;
+     color: #6900C4;
+     margin-top: 0;
+    }
+    p {
+     color: #B2BAC2;
+     font-size: 0.9em;
+     line-height: 1.5;
+     font-size: 100;
+    } 
+    #comments {
+        .comment {
+         border-bottom: 1px solid #d1d1d1;
+         padding-bottom: 1em;
+         margin-bottom: 1em;
+         .content {
+         width: 75%;
+         float: left;
+         }
+         .buttons {
+          width: 25%;
+          float: left;
+          font-size: 0.8em;
+          text-align: right;
+          padding-top: 1.5em;
+           a {
+           color: #6900C4;
+           border: 1px solid #6900C4;
+           padding: .5em 1em;
+           border-radius: 0.2em;
+           text-decoration: none; 
+           margin-right: 2%;
+           }
+         }
+         .comment_content {
+          margin: 0;
+          padding: 0;
+         }
+         .comment_author {
+          color: #6900c4;
+          margin-top: 0.5rem; 
+          font-size: 0.6rem;
+          font-weight: 700;
+         }
+        }
+        input[type="submit"] {
+         background: #6900C4;
+         border: none;
+         color: white;
+         font-weight: 100;
+         padding: .5em 1em;
+         border-radius: .2em;
+        }
+        textarea {
+         width: 100%;
+         min-height: 100px;
+         border: 1px solid #d1d1d1;
+         border-radius: .2em;
+         margin: 1em 0;
+        }
+       }
+      }

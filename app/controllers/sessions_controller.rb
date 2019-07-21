@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to root_url, notice: "Successfully logged in!"
     else
-      flash.now[:alert] = "Invalid login information"
+      flash.now[:alert] = "Invalid login information."
       render "new"
     end
   end
