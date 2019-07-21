@@ -18,7 +18,6 @@ class PostsController < ApplicationController
 
     end
 
-
     def show
     end
 
@@ -38,11 +37,13 @@ class PostsController < ApplicationController
         end
     end
 
-    private
-
+    
     def post_params
         params.require(:post).permit(:title, :context)
     end
+
+
+    private
 
     def find_post
         @post = Post.find(params[:id])
