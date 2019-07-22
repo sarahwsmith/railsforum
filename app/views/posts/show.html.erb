@@ -1,9 +1,9 @@
 <div id="post_body">
   <h1>
-    <%= @post.title %>
+    <%=sanitize @post.title %>
   </h1>
   <p>
-    <%= @post.context %>
+    <%=sanitize @post.context %>
   </p>
 <div id="comments">
   <h2>
@@ -22,6 +22,7 @@
   <%= link_to "Home", root_path %>
   </div>
 </div>
+
 
 <div id ="sidebar">
   <div class = "blurb">

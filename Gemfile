@@ -9,6 +9,7 @@ gem 'rails', '~> 5.2.3'
 gem 'sqlite3'
 gem 'simple_form', '~> 4.0', '>= 4.0.1'
 gem 'devise', '~> 4.4', '>= 4.4.3'
+gem 'gemoji'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 # Use Puma as the app server

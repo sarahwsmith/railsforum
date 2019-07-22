@@ -1,4 +1,16 @@
 class PostsController < ApplicationController
+    
+        def emojify(context)
+          h(context).to_str.gsub(/:([\w+-]+):/) do |match|
+            if emoji = Emoji.find_by_alias($1)
+              %(<img alt="#$1" src="#{image_path("emoji/#{emoji.image_filename}")}" style="vertical-align:middle" width="20" height="20" />)
+            else
+              match
+            end
+          end.html_safe if context.present?
+        end
+      
+
     def index
         @posts = Post.all.order("created_at DESC")
     end
@@ -8,8 +20,10 @@ class PostsController < ApplicationController
     end
 
     def create
+        
+        params[:context] = emojify(params[:context])
         @post = current_user.posts.build(post_params)
-
+        
         if @post.save
             redirect_to @post
         else
