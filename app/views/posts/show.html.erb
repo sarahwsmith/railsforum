@@ -1,25 +1,26 @@
 <div id="post_body">
   <h1>
-    <%=sanitize @post.title %>
+    <%= @post.title %>
   </h1>
-  <p>
-    <%=sanitize @post.context %>
+  <p><span class="left"><%= @post.user.email %></span>
+  <span class="right">
+    <%= @post.context %></span>
   </p>
+  <% if current_user == @post.user%>
+  <%= link_to "Delete Post", post_path(@post), method: :delete %> 
+  <% end %>
 <div id="comments">
   <h2>
     <%= @post.comments.count %>
     Comments 
   </h2>
   <%= render @post.comments %>
-<h3>Reply to thread
+<h3>
   <%= render "comments/form" %>
 </h3>
 <br>
-  <hr/>
   <br/>
 </br>
-  <%= link_to "Delete Post", post_path(@post), method: :delete, class: "button" %>
-  <%= link_to "Home", root_path %>
   </div>
 </div>
 

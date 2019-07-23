@@ -1,13 +1,15 @@
 <div class="comment clearfix">
-  <div class="content">
-    <p class="comment_content">
-      <%= comment.comment %>
+  <div class="body">
+    <p class="comment_body">
+      <%= comment.comment.html_safe %>
     </p>
-    <p class="comment_author">
-      <%= comment.user.email %>
+    <p class="comment_creator">
+      Posted by: <%= comment.user.email %>
     </p>
   </div>
+  <% if current_user == comment.user %>
   <div class="buttons">
     <%= link_to "Delete", [comment.post, comment], method: :delete%>
   </div>
+  <% end %>
 </div>

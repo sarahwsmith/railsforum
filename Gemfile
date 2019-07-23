@@ -12,6 +12,7 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'gemoji'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+gem 'emoji'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
