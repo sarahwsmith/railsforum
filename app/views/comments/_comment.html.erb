@@ -1,10 +1,10 @@
 <div class="comment clearfix">
   <div class="body">
+  <p class="comment_creator">
+  Posted by: <%= comment.user.email %>
+</p>
     <p class="comment_body">
       <%= comment.comment.html_safe %>
-    </p>
-    <p class="comment_creator">
-      Posted by: <%= comment.user.email %>
     </p>
   </div>
   <% if current_user == comment.user %>

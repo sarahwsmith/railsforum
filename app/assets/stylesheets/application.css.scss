@@ -93,7 +93,7 @@
         text-transform: uppercase;
         text-decoration: none;
         font-weight: 150;
-        font-size: 1.25rem;
+        font-size: 30;
        
     }
     a {
@@ -101,16 +101,16 @@
         text-transform: uppercase;
         text-decoration: none;
         font-weight: 150;
-        font-size: 1.25rem;
+        font-size: 20px;
        }
        a:hover{
            background: #6900C4;
            color: #FFFFFF;
        }
     .post {
-     margin: 1em 0;
-     padding: 1em 0;
-     border-bottom: 1px solid #D1d1d1;
+     margin: 16px 0;
+     padding: 16px 0;
+     border-bottom: 1px solid black;
      .title {
       margin: 0;
       a {
@@ -118,7 +118,7 @@
        text-transform: uppercase;
        text-decoration: none;
        font-weight: 150;
-       font-size: 1.25rem;
+       font-size: 20px;
       }
       a:hover{
           background: #6900C4;
@@ -126,8 +126,8 @@
       }
      }
      .post_creator {
-      margin-top: .25rem;
-      font-size: 0.9rem;
+      margin-top: 4px;
+      font-size: 16px;
       color: #B2BAC2;
       a{
           text-transform: lowercase;
@@ -149,11 +149,11 @@
    
    #post_body {
     background: white;
-    padding: 30px;;
+    padding: 30px;
+    border: 1px solid black;
     width: 700px;
     float: left;
     margin-right: 30px;
-    border: 1px solid black;
     span{
         padding:5px;
         margin: 0;
@@ -222,8 +222,8 @@
          }
          .comment_creator {
           color: #6900c4;
-          margin-top: 0.5rem; 
-          font-size: 0.6rem;
+          margin-top: 8px; 
+          font-size: 12px;
           font-weight: 700;
          }
         }

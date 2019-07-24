@@ -3,17 +3,13 @@
     <%= @post.title %>
   </h1>
   <p><span class="left"><%= @post.user.email %></span>
-  <span class="right">
-    <%= @post.context %></span>
+ 
+    <%= simple_format(strip_tags(@post.context)) %>
   </p>
   <% if current_user == @post.user%>
   <%= link_to "Delete Post", post_path(@post), method: :delete %> 
   <% end %>
 <div id="comments">
-  <h2>
-    <%= @post.comments.count %>
-    Comments 
-  </h2>
   <%= render @post.comments %>
 <h3>
   <%= render "comments/form" %>

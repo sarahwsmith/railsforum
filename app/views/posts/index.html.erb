@@ -3,7 +3,7 @@
   <div class ="post">
     <h2 class ="title"><%= link_to post.title, post %> </h2>
     </br>
-    <p class ="post_creator"><i><%= truncate(post.context, length: 180) {link_to "Continue", post}%></i>
+    <p class ="post_creator"><i><%= truncate(post.context, length: 160) {link_to "Continue", post}%></i>
     </br></br>Posted by
     <%= post.user.email %>
     </br><%= post.comments.count %> Comments</p>
