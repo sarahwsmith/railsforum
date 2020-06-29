@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+GirlBoss Message Board (GBMB) is a forum concept project built with Ruby using MVC architecture and published to a local server via Rails. 
 
-Things you may want to cover:
+CRUD operations are available for both users and posts. Posts are linked to the user that created the post. 
 
-* Ruby version
+To publish this project, download the files and run the rails s command from the control line (after navigating to the project directory). Project can be accessed after booting server by visiting http://localhost:3000
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
